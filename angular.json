@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "f5621daa-4ff4-4686-9c23-d419805aad06"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -102,6 +105,37 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "j-tabs": {
+      "projectType": "library",
+      "root": "projects/j-tabs",
+      "sourceRoot": "projects/j-tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/j-tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/j-tabs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/j-tabs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/j-tabs/src/test.ts",
+            "tsConfig": "projects/j-tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/j-tabs/karma.conf.js"
           }
         }
       }

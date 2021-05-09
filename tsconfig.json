@@ -8,6 +8,12 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "j-tabs": [
+        "dist/j-tabs/j-tabs",
+        "dist/j-tabs"
+      ]
+    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
